@@ -111,10 +111,10 @@ export default function ContactPage() {
             >
               <div className="mb-12">
                 <div className="w-32 h-32 mx-auto lg:mx-0 mb-6 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center overflow-hidden">
-                  <img src="/profile.png" alt="John Doe" className="w-28 h-28 object-cover rounded-full" />
+                  <img src="/MuhammadAli.jpeg" alt="John Doe" className="w-28 h-28 object-cover rounded-full" />
                 </div>
-                <h2 className="text-3xl font-black mb-2">Farhad Ahmad</h2>
-                <p className="text-purple-300 text-lg">Creative Developer & Designer</p>
+                <h2 className="text-3xl font-black mb-2">Muhammad Ali</h2>
+                <p className="text-purple-300 text-lg">Creative Web Developer & Designer</p>
               </div>
 
               <div className="space-y-6">
@@ -125,7 +125,7 @@ export default function ContactPage() {
                   <Mail className="text-purple-400" size={24} />
                   <div>
                     <p className="font-semibold">Email</p>
-                    <p className="text-purple-200">codewithfarhad@gmail.com</p>
+                    <p className="text-purple-200">m.alibabar2004@gmail.com</p>
                   </div>
                 </motion.div>
 
@@ -136,7 +136,7 @@ export default function ContactPage() {
                   <Phone className="text-purple-400" size={24} />
                   <div>
                     <p className="font-semibold">Phone</p>
-                    <p className="text-purple-200">+1 (555) 123-4567</p>
+                    <p className="text-purple-200">+92 3334895 899</p>
                   </div>
                 </motion.div>
 
@@ -147,7 +147,7 @@ export default function ContactPage() {
                   <MapPin className="text-purple-400" size={24} />
                   <div>
                     <p className="font-semibold">Location</p>
-                    <p className="text-purple-200">Faisalabad, Pak</p>
+                    <p className="text-purple-200">Islamabad, Pakistan</p>
                   </div>
                 </motion.div>
               </div>
@@ -156,7 +156,7 @@ export default function ContactPage() {
                 <h3 className="text-xl font-bold mb-4">Follow Me</h3>
                 <div className="flex gap-4">
                   <motion.a
-                    href="#"
+                    href="https://github.com/Ali-Babar123"
                     className="p-3 bg-black/30 rounded-lg backdrop-blur-sm hover:bg-purple-600 transition-colors"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
@@ -164,7 +164,7 @@ export default function ContactPage() {
                     <Github size={24} />
                   </motion.a>
                   <motion.a
-                    href="#"
+                    href="https://www.linkedin.com/in/muhammad-ali143/"
                     className="p-3 bg-black/30 rounded-lg backdrop-blur-sm hover:bg-blue-600 transition-colors"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}

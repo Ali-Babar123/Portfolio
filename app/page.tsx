@@ -22,7 +22,7 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import { AnimatePresence } from "framer-motion"
-import SplashCursor from "../components/SplashCursor";
+// import SplashCursor from "../components/SplashCursor";
 
 // Register GSAP plugins
 if (typeof window !== "undefined") {
@@ -71,7 +71,7 @@ export default function Portfolio() {
   // Animated left-side scrolling texts
   const leftMessages = [
     "Hi, welcome to my profile.",
-    "I'm a ctrl C + ctrl V engineer",
+    "I'm a Software Engineer",
     "Enjoy your stay!",
     "Let's build something cool.",
     "I debug by yelling at my screen.",
@@ -269,9 +269,9 @@ export default function Portfolio() {
     {
       title: "EXPERIENCE",
       stats: [
-        { icon: Calendar, number: "1+", label: "YEARS EXPERIENCE" },
-        { icon: Code, number: "10+", label: "PROJECTS COMPLETED" },
-        { icon: Users, number: "7+", label: "HAPPY CLIENTS" },
+        { icon: Calendar, number: "6+", label: "YEARS EXPERIENCE" },
+        { icon: Code, number: "20+", label: "PROJECTS COMPLETED" },
+        { icon: Users, number: "12+", label: "HAPPY CLIENTS" },
         { icon: Award, number: "1+", label: "AWARDS WON" },
       ],
     },
@@ -304,7 +304,7 @@ export default function Portfolio() {
         onMouseEnter={() => setShowHeader(true)}
       >
         <div className="flex items-center gap-3">
-          <img src="/profile.png" alt="Logo" className="w-10 h-10 rounded-2xl object-cover" />
+          <img src="/MuhammadAli.jpeg" alt="Logo" className="w-10 h-10 rounded-2xl object-cover" />
           <span className="font-black text-2xl tracking-tight text-white/90">My Profile</span>
         </div>
         <nav className="flex gap-6">
@@ -322,7 +322,7 @@ export default function Portfolio() {
       >
         {/* SplashCursor effect in hero section background */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-          <SplashCursor />
+       
         </div>
         {/* Animated colorful blobs and floating dots in hero background */}
         <div className="absolute inset-0 z-0 pointer-events-none">
@@ -359,21 +359,21 @@ export default function Portfolio() {
             {leftMessages[leftMsgIndex]}
           </motion.div>
         </div>
-        <motion.div className="parallax-bg absolute inset-0 z-0" style={{ y: backgroundY }}>
+        <motion.div className="parallax-bg  absolute inset-0 z-0" style={{ y: backgroundY }}>
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/30 to-black"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(120,119,198,0.15),transparent_50%)]"></div>
         </motion.div>
 
-        <motion.div className="relative z-10 text-center px-4" style={{ y: textY }}>
+        <motion.div className="relative mt-4 z-10 text-center px-4" style={{ y: textY }}>
           <motion.h1
             className="hero-title text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-6"
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: 'easeOut' }}
           >
-            <span className="shiny-text">Farhad</span>
+            <span className="shiny-text">Muhammad</span>
             <br />
-            <span className="shiny-text">Ahmad</span>
+            <span className="shiny-text">Ali</span>
           </motion.h1>
           <p className="hero-subtitle text-xl md:text-2xl font-bold tracking-wide text-gray-300 mb-8">
             Agentic AI & Full Stack Developer
@@ -455,21 +455,21 @@ export default function Portfolio() {
               </p>
               <div className="flex gap-6 mb-8">
                 <motion.a
-                  href="#"
+                  href="https://github.com/Ali-Babar123"
                   className="text-white hover:text-purple-400 transition-colors"
                   whileHover={{ scale: 1.2 }}
                 >
                   <Github size={32} />
                 </motion.a>
                 <motion.a
-                  href="#"
+                  href="https://www.linkedin.com/in/muhammad-ali143/"
                   className="text-white hover:text-blue-400 transition-colors"
                   whileHover={{ scale: 1.2 }}
                 >
                   <Linkedin size={32} />
                 </motion.a>
                 <motion.a
-                  href="#"
+                  href="mailto:m.alibabar2004@gmail.com"
                   className="text-white hover:text-green-400 transition-colors"
                   whileHover={{ scale: 1.2 }}
                 >
@@ -477,7 +477,7 @@ export default function Portfolio() {
                 </motion.a>
               </div>
               <a
-                href="/cv.pdf"
+                href="/MuhammadAli_Resume (1).pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold shadow-md hover:from-purple-600 hover:to-blue-600 transition-colors text-lg mt-2"
@@ -499,7 +499,7 @@ export default function Portfolio() {
             >
               <div className="w-[400px] h-[520px] mx-auto bg-gradient-to-br from-purple-600 to-blue-600 rounded-[2.5rem] flex items-center justify-center">
                 <div className="w-[380px] h-[500px] bg-black rounded-[2.5rem] flex items-center justify-center overflow-hidden">
-                  <img src="/profile.png" alt="John Doe" className="w-[380px] h-[500px] object-cover rounded-[2.5rem]" />
+                  <img src="/MuhammadAli.jpeg" alt="Muhammad Doe" className="w-[380px] h-[500px] object-cover rounded-[2.5rem]" />
                 </div>
               </div>
             </motion.div>
@@ -741,19 +741,19 @@ export default function Portfolio() {
               {
                 name: "Sarah Johnson",
                 role: "CEO, TechStart",
-                text: "John delivered an exceptional website that exceeded our expectations. His attention to detail and creative vision is unmatched.",
+                text: "Muhammad delivered an exceptional website that exceeded our expectations. His attention to detail and creative vision is unmatched.",
                 rating: 5,
               },
               {
                 name: "Mike Chen",
                 role: "Founder, DesignCo",
-                text: "Working with John was a game-changer for our business. The mobile app he built increased our user engagement by 300%.",
+                text: "Working with Muhammad was a game-changer for our business. The mobile app he built increased our user engagement by 300%.",
                 rating: 5,
               },
               {
                 name: "Emily Davis",
                 role: "Marketing Director",
-                text: "Professional, creative, and reliable. John transformed our brand identity and created a stunning e-commerce platform.",
+                text: "Professional, creative, and reliable. Muhammad transformed our brand identity and created a stunning e-commerce platform.",
                 rating: 5,
               },
             ].map((testimonial, index) => (
