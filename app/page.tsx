@@ -86,7 +86,7 @@ export default function Portfolio() {
     "I'm not lazy, I'm on energy-saving mode.",
     "I'm silently correcting your grammar.",
     "I put the 'pro' in procrastinate.",
-    
+
   ];
   const [leftMsgIndex, setLeftMsgIndex] = useState(0);
   useEffect(() => {
@@ -300,21 +300,59 @@ export default function Portfolio() {
       {/* Glassmorphism Header */}
       <header
         ref={headerRef}
-        className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90vw] max-w-5xl rounded-3xl bg-white/10 backdrop-blur-md shadow-lg flex items-center justify-between px-8 py-4 transition-transform duration-500 ${showHeader ? 'translate-y-0 opacity-100' : '-translate-y-32 opacity-0 pointer-events-none'}`}
+        className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95vw] max-w-5xl rounded-3xl bg-white/10 backdrop-blur-md shadow-lg flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 py-3 transition-transform duration-500 ${showHeader
+            ? 'translate-y-0 opacity-100'
+            : '-translate-y-32 opacity-0 pointer-events-none'
+          }`}
         onMouseEnter={() => setShowHeader(true)}
       >
-        <div className="flex items-center gap-3">
-          <img src="/MuhammadAli.jpeg" alt="Logo" className="w-10 h-10 rounded-2xl object-cover" />
-          <span className="font-black text-2xl tracking-tight text-white/90">My Profile</span>
+        {/* Profile Section */}
+        <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-0">
+          <img
+            src="/MuhammadAli.jpeg"
+            alt="Logo"
+            className="w-8 h-8 sm:w-10 sm:h-10 rounded-2xl object-cover"
+          />
+          <span className="font-bold text-lg sm:text-2xl tracking-tight text-white/90">
+            My Profile
+          </span>
         </div>
-        <nav className="flex gap-6">
-          <a href="#about" className="text-white/80 font-semibold hover:text-white transition-colors px-3 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400">About</a>
-          <a href="#skills" className="text-white/80 font-semibold hover:text-white transition-colors px-3 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400">Skills</a>
-          <a href="#projects" className="text-white/80 font-semibold hover:text-white transition-colors px-3 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400">Projects</a>
-          <a href="#testimonials" className="text-white/80 font-semibold hover:text-white transition-colors px-3 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400">Testimonials</a>
-          <a href="#contact" className="text-white/80 font-semibold hover:text-white transition-colors px-3 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400">Contact</a>
+
+        {/* Navigation */}
+        <nav className="flex flex-wrap justify-center gap-3 sm:gap-6">
+          <a
+            href="#about"
+            className="text-white/80 text-sm sm:text-base font-semibold hover:text-white transition-colors px-2 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+          >
+            About
+          </a>
+          <a
+            href="#skills"
+            className="text-white/80 text-sm sm:text-base font-semibold hover:text-white transition-colors px-2 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+          >
+            Skills
+          </a>
+          <a
+            href="#projects"
+            className="text-white/80 text-sm sm:text-base font-semibold hover:text-white transition-colors px-2 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+          >
+            Projects
+          </a>
+          <a
+            href="#testimonials"
+            className="text-white/80 text-sm sm:text-base font-semibold hover:text-white transition-colors px-2 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+          >
+            Testimonials
+          </a>
+          <a
+            href="#contact"
+            className="text-white/80 text-sm sm:text-base font-semibold hover:text-white transition-colors px-2 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+          >
+            Contact
+          </a>
         </nav>
       </header>
+
       {/* Hero Section with Parallax */}
       <section
         ref={heroRef}
@@ -322,7 +360,7 @@ export default function Portfolio() {
       >
         {/* SplashCursor effect in hero section background */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-       
+
         </div>
         {/* Animated colorful blobs and floating dots in hero background */}
         <div className="absolute inset-0 z-0 pointer-events-none">
@@ -364,7 +402,7 @@ export default function Portfolio() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(120,119,198,0.15),transparent_50%)]"></div>
         </motion.div>
 
-        <motion.div className="relative mt-4 z-10 text-center px-4" style={{ y: textY }}>
+        <motion.div className="relative z-10 lg:mt-4 text-center px-4" style={{ y: textY }}>
           <motion.h1
             className="hero-title text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-6"
             initial={{ opacity: 0, y: 60 }}
@@ -380,13 +418,14 @@ export default function Portfolio() {
           </p>
           <div className="flex gap-6 justify-center">
             <motion.a
-              href="#projects"
-              className="px-8 py-4 bg-white text-black font-bold text-lg tracking-wide hover:bg-gray-200 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              VIEW WORK
-            </motion.a>
+  href="#projects"
+  className="px-6 py-5 text-base sm:px-8 sm:py-4 sm:text-lg bg-white text-black font-bold tracking-wide hover:bg-gray-200 transition-colors"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  VIEW WORK
+</motion.a>
+
             <Link href="/contact">
               <motion.div
                 className="px-8 py-4 border-2 border-white text-white font-bold text-lg tracking-wide hover:bg-white hover:text-black transition-colors cursor-pointer"
@@ -497,11 +536,16 @@ export default function Portfolio() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="w-[400px] h-[520px] mx-auto bg-gradient-to-br from-purple-600 to-blue-600 rounded-[2.5rem] flex items-center justify-center">
-                <div className="w-[380px] h-[500px] bg-black rounded-[2.5rem] flex items-center justify-center overflow-hidden">
-                  <img src="/MuhammadAli.jpeg" alt="Muhammad Doe" className="w-[380px] h-[500px] object-cover rounded-[2.5rem]" />
+              <div className="w-[90%] h-[420px] sm:w-[400px] sm:h-[520px] mx-auto bg-gradient-to-br from-purple-600 to-blue-600 rounded-[2rem] sm:rounded-[2.5rem] flex items-center justify-center">
+                <div className="w-[100%] h-[400px] sm:w-[380px] sm:h-[500px] bg-black rounded-[2rem] sm:rounded-[2.5rem] flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/MuhammadAli.jpeg"
+                    alt="Muhammad Doe"
+                    className="w-full h-full object-cover rounded-[2rem] sm:rounded-[2.5rem]"
+                  />
                 </div>
               </div>
+
             </motion.div>
           </div>
         </div>
