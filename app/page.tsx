@@ -279,8 +279,8 @@ export default function Portfolio() {
       title: "EDUCATION",
       stats: [
         { icon: Calendar, number: "2025", label: "GRADUATED" },
-        { icon: Code, number: "BSc", label: "COMPUTER SCIENCE" },
-        { icon: Users, number: "3.8", label: "GPA" },
+        { icon: Code, number: "BS", label: "SOFTWARE ENGINEERING" },
+        { icon: Users, number: "3.2", label: "GPA" },
         { icon: Award, number: "2", label: "HONORS" },
       ],
     },
